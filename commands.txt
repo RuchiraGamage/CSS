@@ -1,0 +1,5 @@
+npm init 
+npm install node-sass --save-dev
+npm run <script:command>
+npm install live-server -g
+live server
