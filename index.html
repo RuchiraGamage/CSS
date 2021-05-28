@@ -75,9 +75,18 @@
 
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="photo 1" class="composition-photo composition-photo-p1">
-                        <img src="img/nat-2-large.jpg" alt="photo 2" class="composition-photo composition-photo-p2">
-                        <img src="img/nat-3-large.jpg" alt="photo 3" class="composition-photo composition-photo-p3">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600) 30vw, 300px" src="img/nat-1-large.jpg"
+                            alt="photo 1" class="composition-photo composition-photo-p1">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600) 30vw, 300px" src="img/nat-2-large.jpg"
+                            alt="photo 2" class="composition-photo composition-photo-p2">
+
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600) 30vw, 300px" src="img/nat-3-large.jpg"
+                            alt="photo 3" class="composition-photo composition-photo-p3">
                     </div>
                 </div>
             </div>
@@ -351,7 +360,8 @@
     </main>
     <footer class="footer">
         <div class="footer-logo-box">
-            <img src="img/logo-green-2x.png" alt="large logo" class="footer-logo">
+            <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" media="(max-width: 37.5em)"
+                src="img/logo-green-2x.png" alt="large logo" class="footer-logo">
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -386,10 +396,11 @@
             </div>
             <div class="popup-right">
                 <a href="#section-tours" class="popup-close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                <h2 class="heading-secondary u-margin-bottom-small" style="padding: 1rem;">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small" style="padding: 1rem;">Important &ndash; Please read
+                    these terms before
                     booking</h3>
-                <p class="popup-text">
+                <p class="popup-text" style="padding: 1rem;">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis perferendis obcaecati
                     accusantium et officia! Eligendi ad neque distinctio expedita veniam, in commodi fugit
                     blanditiis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis perferendis
@@ -411,7 +422,7 @@
                     blanditiis
                     impedit pariatur nesciunt eveniet atque fuga.
                 </p>
-                <a href="#" class="btn btn-green">Book now</a>
+                <a href="#" class="btn btn-green popup-btn">Book now</a>
             </div>
         </div>
     </div>

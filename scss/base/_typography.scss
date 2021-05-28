@@ -13,6 +13,11 @@
         animation-name: moveToRight;
         animation-duration: 3s;
         margin-bottom: 2rem;
+
+        @include respond(phone){
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
     }
     
     &-sub {
@@ -23,6 +28,11 @@
     
         animation: moveToLeft 3s ease-out;
         margin-bottom: 2rem;
+
+        @include respond(phone){
+            font-size: 4rem;
+            letter-spacing: .5rem;
+        }
     
         /*
         animation-delay: 3s;    
@@ -41,6 +51,14 @@
     letter-spacing: .2rem;
     transition: all .2s;
 
+
+    @include respond(tab-port){
+        font-size: 2.5rem;
+    }
+
+    @include respond(phone){
+        font-size: 2rem;
+    }
     
     &:hover{
         transform: skewY(5deg) skewX(10deg);
@@ -54,8 +72,6 @@ body {
     font-size: $default-font-size;
     line-height: 1.7;
     color: $color-grey;
-    padding: 2rem;
-    box-sizing: border-box;
 }
 
 .tertiary-heading {

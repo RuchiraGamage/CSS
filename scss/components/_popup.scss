@@ -12,6 +12,12 @@
 
     transition: all .3s;
 
+    @supports (background-filter: blur(10px)) or (-webkit-background-filter: blur(10px)) {
+        -webkit-background-filter: blur(10px);
+        background-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
     &:target{
         opacity: 1;
         visibility: visible;
@@ -86,6 +92,80 @@
 
         &:hover{
             color: $color-primary;
+        }
+    }
+
+    @include respond(phone){
+        &-btn{
+            margin: 5px;
+        }
+
+        &-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 75%;
+    
+            border-radius: 3px;
+            display: table;
+            overflow: hidden;
+    
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(.15);
+            transition: all .2s;
+        }
+    
+        &:target &-content{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    
+        &-left{
+            width: 100%;
+            display: table-row;
+        }
+    
+        &-right{
+            width: 100%;
+            display: table-row;
+            vertical-align: middle;
+            padding: 3rem 5rem;
+        }
+    
+        &-img{
+            width: 100%;
+            display: block;
+        }
+    
+        &-text{
+            font-size: 1rem;
+    
+            column-count: 3;
+            column-gap: 1rem; // 1em = 14 px (1em always equal to current element font size)
+            column-rule: 1px solid $color-grey-dark-3;
+    
+            -moz-hyphens: auto; // to work hyphens im mozilla browzer
+            -ms-hyphens: auto; // for microsoft edge
+            hyphens: auto;
+        }
+    
+        &-close{
+            &:link,
+            &:visited{
+                color: $color-white;
+                position: absolute;
+                top: 2.5rem;
+                right: 2.5rem;
+                font-size: 3rem;
+                text-decoration: none;
+                display: inline-block;
+                transition: all .2s;
+                line-height: 1;
+            }
+    
+            &:hover{
+                color: $color-primary;
+            }
         }
     }
 }
