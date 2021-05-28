@@ -17,6 +17,11 @@
 
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port){
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &-background{
@@ -31,6 +36,11 @@
     
         transition: transform .8s;
         // transform: scale(80);
+
+        @include respond(tab-port){
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &-nav{
