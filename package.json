@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Test App",
+  "main": "responsive/index.html",
+  "scripts": {
+    "start": "cd responsive && index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
