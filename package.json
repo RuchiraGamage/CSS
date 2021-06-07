@@ -4,7 +4,7 @@
   "description": "Test App",
   "main": "responsive/index.html",
   "scripts": {
-     "start": "cd responsive"
+     "start": "cd responsive && node app.js"
   },
   "keywords": [],
   "author": "",
