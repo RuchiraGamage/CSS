@@ -1,0 +1,166 @@
+/////////////////////////
+//LOGO
+
+.logo{
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+/////////////////////////
+//SEARCH
+
+.search{
+    flex: 0 0 40%; // 1st arg flex grow(0 = dont grow it available space)
+    // 2nd arg flex shrink(0 = dont alow it shirnk when divice width reducede)
+    // 3rd arg width(% of available space)
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--colour-gray-light-2);
+        border: none;
+        color: inherit;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--colour-gray-light-3);
+        }
+
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--colour-gray-light-4) ;
+        }
+    }
+
+    &-input:focus + &-button{
+        background-color: var(--colour-gray-light-3);
+    }
+
+    &-button{
+        border: none;
+        background-color: var(--colour-gray-light-2);
+
+        &:focus{
+            outline: none;
+        }
+
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+
+    &-icon{
+        height: 2rem;
+        width: 2rem;
+        fill: var(--colour-gray-light-3);
+    }
+}
+
+/////////////////////////
+//USER NAVIGATION
+
+.user-nav{
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover{
+        background-color: var(--colour-gray-light-2);
+    }
+
+    &-icon{
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--colour-gray-light-2);
+    }
+
+    &-icon-box{
+        position: relative;
+    }
+
+    &-notification{
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--colour-primary);
+        color: white;
+
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-user{
+        &-photo{
+            height: 3.75rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
+}
+
+/////////////////////////
+//SIDE NAVIGATION
+
+.side-nav{
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    list-style: none;
+
+    &-item{
+
+    }
+
+    &-link:link,
+    &-link:visited{
+        color: var(--colour-gray-light-1);
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: block;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &-icon{
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+}
+
+/////////////////////////
+//LEGAL TEXT
+
+.legal{
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--colour-gray-light-4);
+}
