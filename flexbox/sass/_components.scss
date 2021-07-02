@@ -221,7 +221,7 @@
     display: flex;
     align-items: center;
 
-    border-bottom:1px solid var(--colour-gray-light-2);
+    border-bottom:var(--line);
 
     &-icon-map,
     &-icon-star{
@@ -320,3 +320,6 @@
         box-shadow: none;
     }
 }
+
+/////////////////////////
+// 
