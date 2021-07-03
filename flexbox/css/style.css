@@ -216,8 +216,13 @@ body {
   cursor: pointer;
   background-color: transparent;
   transition: all .2s; }
+  .button-inline span {
+    margin-left: 3px;
+    transition: all .2s; }
   .button-inline:hover {
     color: black; }
+    .button-inline:hover span {
+      margin-left: 8px; }
   .button-inline:focus {
     outline: none;
     animation: smallanimation 1s infinite; }
@@ -232,6 +237,130 @@ body {
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; }
+  .list-item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list-item::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .7rem;
+    background-color: var(--colour-primary);
+    -webkit-mask-image: url(../img/SVG/chevron-thin-right.svg);
+    -webkit-mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--colour-gray-dark-3);
+  display: flex;
+  align-items: center; }
+  .recommend-count {
+    margin-right: auto; }
+  .recommend-photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid white; }
+    .recommend-photo:not(:first-child) {
+      margin-left: -1.5rem; }
+
+.review {
+  position: relative;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden; }
+  .review-user {
+    display: flex;
+    align-items: center; }
+  .review-user-box {
+    margin-right: auto; }
+  .review-user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem; }
+  .review-user-date {
+    font-size: 1rem;
+    color: var(--colour-gray-dark-3); }
+  .review-text {
+    margin-bottom: 2rem;
+    z-index: 3;
+    position: relative; }
+  .review-photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review-rating {
+    color: var(--colour-primary);
+    font-size: 2rem;
+    font-weight: 300; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -7.75rem;
+    left: -1rem;
+    font-family: sans-serif;
+    font-size: 20rem;
+    color: var(--colour-gray-light-2);
+    z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase; }
+
+.btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(to right, var(--colour-primary-light), var(--colour-primary-dark));
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn-visible {
+    padding: 2rem 7.5rem; }
+  .btn-invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%; }
+  .btn:hover .btn-visible {
+    transform: translateY(-100%); }
+  .btn:hover .btn-invisible {
+    top: 0; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--colour-primary-light), var(--colour-primary-dark)); }
+  .btn:focus {
+    outline: none;
+    animation: smallanimation 1s infinite; }
 
 .container {
   max-width: 120rem;
@@ -263,13 +392,13 @@ body {
   flex: 1; }
 
 .details {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--colour-gray-light-1);
   border-bottom: var(--line); }
 
 .description {
-  font-size: 1.4rem;
   background-color: orange;
   flex: 1 0 60%;
   margin-right: 4.5rem;
@@ -278,5 +407,7 @@ body {
   padding: 3rem; }
 
 .user-reviews {
-  background-color: orangered;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
