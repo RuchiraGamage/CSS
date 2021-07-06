@@ -1,0 +1,13 @@
+  
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Test App",
+  "main": "flexbox/index.html",
+  "scripts": {
+     "start": "cd responsive && node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
