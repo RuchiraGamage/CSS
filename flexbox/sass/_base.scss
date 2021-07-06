@@ -36,6 +36,11 @@ $font-display: 'Josefin Sans', sans-serif;
     --line: 1px solid var(--colour-gray-light-2);
 }
 
+$break-point-largest: 75em; // 1200px/16px = 75em
+$break-point-large: 68.75em; //1100px
+$break-point-medium: 56.25em; //900px
+$break-point-small: 37.5em; // 600px
+$break-point-smallest: 31.25em; // 500px
 
 * {
     padding: 0;
@@ -53,6 +58,10 @@ html{
     box-sizing: border-box;
     //base font-size
     font-size: 62.5%; // 1rem = 10px, default browser set 16px to 100%
+
+    @media only screen and (max-width: $break-point-large){
+        font-size: 50%;
+    }
 }
 
 body{
